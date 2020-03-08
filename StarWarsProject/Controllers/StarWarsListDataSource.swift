@@ -14,7 +14,7 @@ protocol StarWarsListDataSourceProtocol {
     func isLoadingCell(cell: UITableViewCell) -> Bool
 }
 
-final class CharacterListDataSource: NSObject, StarWarsListDataSourceProtocol {
+final class StarWarsListDataSource: NSObject, StarWarsListDataSourceProtocol {
     // MARK: - Properties:
     let tableView: UITableView
     let viewModel: StarWarsViewModelReloadableProtocol
@@ -75,7 +75,7 @@ final class CharacterListDataSource: NSObject, StarWarsListDataSourceProtocol {
 }
 
 // MARK; - UITableviewDataSource
-extension CharacterListDataSource: UITableViewDataSource {
+extension StarWarsListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let numberOfItems = items.count
         return viewModel.hasMore ? numberOfItems + 1 : numberOfItems

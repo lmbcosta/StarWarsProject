@@ -22,7 +22,7 @@ class StarWarsListViewController: UIViewController {
          searchController: UISearchController) {
         self.searchController = searchController
         self.viewModel = viewModel.viewModelPaginableProtocol
-        self.dataSource = CharacterListDataSource(tableView: tableView,
+        self.dataSource = StarWarsListDataSource(tableView: tableView,
                                                   viewModel: viewModel.viewModelReloadableProtocol)
         self.searchBarDelegate = StarWarsSearchBarDelegate(viewModel: viewModel.viewModelSearchableProtocol)
         super.init(nibName: nil, bundle: nil)
