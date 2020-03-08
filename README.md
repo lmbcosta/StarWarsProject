@@ -11,7 +11,7 @@ Components  | Main Responsability
 ----------- | -------------------
 [AppCoordinator](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Coordinator/AppCoordinator.swift) | Instantiates dependencies and presents navigation
 [StarWarsListViewController](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Controllers/StarWarsListViewController.swift) | Builds and controls different UI components for list screen
-[StarWarsListDataSource](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Controllers/CharacterListDataSource.swift) | Manages data and feeds content for table view cells
+[StarWarsListDataSource](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Controllers/StarWarsListDataSource.swift) | Manages data and feeds content for table view cells
 [StarWarsViewModel](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/ViewModels/StarWarsViewModel.swift) | Manages pagination and search logic for network requests
 [StarWarsSearchBarDelegate](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Controllers/StarWarsSearchBarDelegate.swift) | Handles search bar's text input
 [StarWarsService](https://github.com/lmbcosta/StarWarsProject/blob/master/StarWarsProject/Services/StarWarsService.swift) | Manages network calls to Star Wars API
