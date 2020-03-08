@@ -36,7 +36,6 @@ class StarWarsViewModel: StarWarsViewModelProtocol {
     
     private var hasMoreItems: Bool = true
     private var currentPage: Int
-    private var queryText: String?
     
     // MARK:  Initializer
     init(service: StarWarsServiceProtocol) {
@@ -92,7 +91,6 @@ class StarWarsViewModel: StarWarsViewModelProtocol {
 // MARK: - StarWarsViewModelSearchableProtocol
 extension StarWarsViewModel: StarWarsViewModelSearchableProtocol {
     func fetchSearchedItems(matching query: String?, then handler: @escaping (ViewState) -> Void) {
-        queryText = query
         resetPaginationState()
         fetchItems(query: query, then: handler)
     }
@@ -101,7 +99,6 @@ extension StarWarsViewModel: StarWarsViewModelSearchableProtocol {
 // MARK: - StarWarsViewModelPaginableProtocol
 extension StarWarsViewModel: StarWarsViewModelPaginableProtocol {
     func fetchNextPaginatedItems(then handler: @escaping (ViewState) -> Void) {
-        queryText = nil
         fetchItems(page: currentPage, then: handler)
     }
 }
